@@ -127,8 +127,7 @@
                 android:textColorHint="@color/colorWhite"
                 android:textColor="@color/colorWhite"
                 android:inputType="number"
-                android:focusableInTouchMode="false"
-                android:clickable="true">
+                >
 
             </EditText>
 

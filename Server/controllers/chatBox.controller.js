@@ -134,14 +134,14 @@ exports.removeMessage = (req, res) => {
 exports.updateSeenStatusMessages = (roomID, userID) => {
   ChatBox.findById(roomID)
     .then(chatBox => {
-      for (let i = chatBox.messages.length - 1; i > 0 ; i--) {
+      for (let i = chatBox.messages.length - 1; i >= 0 ; i--) {
         let message = chatBox.messages[i];
         if (message.userID !== userID && !message.isSeen) {
-          // console.log(chatBox.messages[i]);
           ChatBox.updateOne({'messages._id': message._id}, 
                           {'$set': {'messages.$.isSeen': true}},
                           function(err, data) {
-                            console.log(data)
+                            if (err)
+                              console.log(err);
                         });
           // ChatBox.findOneAndUpdate({
           //   '_id': roomID,

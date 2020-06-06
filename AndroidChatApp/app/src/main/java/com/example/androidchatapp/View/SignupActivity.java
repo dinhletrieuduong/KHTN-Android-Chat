@@ -3,6 +3,7 @@ package com.example.androidchatapp.View;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -47,24 +48,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnSignUp;
-    TextView txt_backLogin;
-    EditText edUsername, edPassword, edDisplayName, edAge, edPhone;
-    boolean isImageDefault = true;
-    RadioGroup rdgGender;
-    RadioButton checkGender;
+    private Button btnSignUp;
+    private TextView txt_backLogin;
+    private EditText edUsername, edPassword, edDisplayName, edAge, edPhone;
+    private boolean isImageDefault = true;
+    private RadioGroup rdgGender;
+    private RadioButton checkGender;
 
     private Bitmap bmpAttach;
     private ImageView imgAttach;
-    String base64ImageString;
-    final int REQUEST_PHOTO = 1;
+    private String base64ImageString, requestUrl;
+    private final int REQUEST_PHOTO = 1;
 
     public static final String USER_ID = "userID";
     public static final String USERNAME = "userName";
     public static final String AVATAR = "avatar";
 
-    String requestUrl;
-
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,11 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Please wait...");
+        progressDialog.setCancelable(false);
+
         requestUrl = getResources().getString(R.string.URL_SERVER,  "api/user/signup/");
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_signup);
@@ -200,8 +205,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 Bitmap bitmap = drawable.getBitmap();
                 base64ImageString = Util.convertBitmapToString(bitmap);
             }
-            StringRequest stringRequest = signUpRequest();
-            Volley.newRequestQueue(SignupActivity.this).add(stringRequest);
+            progressDialog.show();
+            Volley.newRequestQueue(SignupActivity.this).add(signUpRequest());
         }
     }
 
@@ -229,9 +234,11 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private StringRequest signUpRequest() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, requestUrl, new Response.Listener<String>() {
+        return new StringRequest(Request.Method.POST, requestUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                progressDialog.hide();
+
                 Log.e("Volley Result: ", response);
                 Gson g = new Gson();
                 UserModel user = g.fromJson(response, UserModel.class);
@@ -246,7 +253,16 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace(); //log the error resulting from the request for diagnosis/debugging
-                Toast.makeText(SignupActivity.this, "Username exists", Toast.LENGTH_SHORT).show();
+                progressDialog.hide();
+
+                if (error.getMessage() != null) {
+                    if (error.getMessage().contains("Errors"))
+                        Toast.makeText(SignupActivity.this, "Connect to server failed.", Toast.LENGTH_SHORT).show();
+                    else
+                        Toast.makeText(SignupActivity.this, "Username exists", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(SignupActivity.this, "Connect to server failed.", Toast.LENGTH_SHORT).show();
             }
         })
         {
@@ -264,6 +280,5 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 return postMap;
             }
         };
-        return stringRequest;
     }
 }

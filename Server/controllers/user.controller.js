@@ -235,6 +235,7 @@ exports.nearBy = (req, res) => {
                     avatar: nearbyUser.avatar,
                     distance: usersDistance,
                     age: nearbyUser.age,
+                    gender: nearbyUser.gender,
                   }
                   nearbyUsers.push(userNearby);
                 }
@@ -287,8 +288,9 @@ exports.updateProfile = (req, res) => {
       user.email = req.body.email === null ? user.email : req.body.email;
       user.place = req.body.place === null ? user.place : req.body.place;
       user.gender = req.body.gender === null ? user.gender : req.body.gender;
+      // user.avatar = req.body.avatar === null ? user.avatar : req.body.avatar;
+
       user.genderSelection = req.body.genderSelection === null ? user.genderSelection : req.body.genderSelection;
-      user.avatar = req.body.avatar === null ? user.avatar : req.body.avatar;
       user.ageSelection = req.body.ageSelection === null ? user.ageSelection : req.body.ageSelection;
       user.locationDistance = req.body.distance === null ? user.locationDistance : req.body.distance;
       return user.save();

@@ -19,7 +19,7 @@
     <string name="forgotpassword">Forgot password?</string>
 
     <!--    <string name="URL_SERVER">http://10.10.206.181:5000/%1$s</string>-->
-    <string name="URL_SERVER">http://172.20.10.11:5000/%1$s</string>
+    <string name="URL_SERVER">http://192.168.2.10:5000/%1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

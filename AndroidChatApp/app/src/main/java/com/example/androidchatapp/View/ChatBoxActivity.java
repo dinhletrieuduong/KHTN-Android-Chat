@@ -253,9 +253,10 @@ public class ChatBoxActivity extends EmojiCompatActivity {
                         String messageID;
                         try {
                             messageID = data.getString("messageID");
-                            for (int i = 0; i < messageList.size() - 1; i++) {
-                                if (messageList.get(i).get_ID().equals(messageID))
-                                    messageList.remove(i);
+                            for (int i = 0; i < messageList.size(); i++) {
+                                if (messageList.get(i).get_ID().equals(messageID)) {
+                                    messageList.remove(messageList.get(i));
+                                }
                             }
                             chatBoxAdapter = new ChatBoxAdapter(messageList, ChatBoxActivity.this, getLayoutInflater(), removeMessageUrl, roomID, userID, socket);
                             chatBoxAdapter.notifyDataSetChanged();
@@ -263,7 +264,6 @@ public class ChatBoxActivity extends EmojiCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
                 });
             }

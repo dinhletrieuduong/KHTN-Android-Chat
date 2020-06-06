@@ -150,6 +150,7 @@ public class FillInfoActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace(); //log the error resulting from the request for diagnosis/debugging
+
             }
         })
         {

@@ -166,7 +166,7 @@ public class NearbyFragment extends Fragment {
 
     private StringRequest getNearbyRequest() {
         progressDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, getNearbyUrl + userID, new Response.Listener<String>() {
+        return new StringRequest(Request.Method.GET, getNearbyUrl + userID, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 progressDialog.hide();
@@ -174,9 +174,9 @@ public class NearbyFragment extends Fragment {
                 try {
                     JSONObject data = new JSONObject(response);
                     JSONArray jsonArray = data.getJSONArray("users");
-                    for (int i = 0; i < jsonArray.length(); i++) {
+                    for (int i1 = 0; i1 < jsonArray.length(); i1++) {
                         Gson gson = new Gson();
-                        UserModel user = gson.fromJson(jsonArray.get(i).toString(), UserModel.class);
+                        UserModel user = gson.fromJson(jsonArray.get(i1).toString(), UserModel.class);
                         usersList.add(user);
                     }
                     nearbyadapter = new NearbyAdapter(usersList, getActivity());
@@ -192,8 +192,6 @@ public class NearbyFragment extends Fragment {
                 error.printStackTrace(); //log the error resulting from the request for diagnosis/debugging
             }
         });
-
-        return stringRequest;
     }
 
 

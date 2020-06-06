@@ -90,6 +90,7 @@ io.on('connection', (socket) => {
   socket.on('message_delete', (roomID, messageID) => {
     console.log('message_deleted');
     
+    // socket.to(roomID).broadcast.emit('message_deleted', {messageID: messageID});
     io.to(roomID).emit('message_deleted', {messageID: messageID});
   })
 
