@@ -281,18 +281,21 @@ exports.updateStatus = (userID) => {
 exports.updateProfile = (req, res) => {
   User.findById(req.body.userID)
     .then(user => {
-      user.name = req.body.name === null ? user.name : req.body.name;
-      user.password = req.body.password === null ? user.password : req.body.password;
-      user.phone = req.body.phone === null ? user.phone : req.body.phone;
-      user.age = req.body.age === null ? user.age : req.body.age;
-      user.email = req.body.email === null ? user.email : req.body.email;
-      user.place = req.body.place === null ? user.place : req.body.place;
-      user.gender = req.body.gender === null ? user.gender : req.body.gender;
-      // user.avatar = req.body.avatar === null ? user.avatar : req.body.avatar;
+      user.name = util.isEmpty(req.body.name)? user.name : req.body.name;
+      user.password = util.isEmpty(req.body.password) ? user.password : req.body.password;
+      user.phone = util.isEmpty(req.body.phone) ? user.phone : req.body.phone;
+      user.age = util.isEmpty(req.body.age) ? user.age : req.body.age;
+      user.email = util.isEmpty(req.body.email) ? user.email : req.body.email;
+      user.place = util.isEmpty(req.body.place)? user.place : req.body.place;
+      user.gender = util.isEmpty(req.body.gender) ? user.gender : req.body.gender;
+      user.avatar = util.isEmpty(eq.body.avatar)? user.avatar : req.body.avatar;
 
-      user.genderSelection = req.body.genderSelection === null ? user.genderSelection : req.body.genderSelection;
-      user.ageSelection = req.body.ageSelection === null ? user.ageSelection : req.body.ageSelection;
-      user.locationDistance = req.body.distance === null ? user.locationDistance : req.body.distance;
+      user.genderSelection = util.isEmpty(req.body.genderSelection) ? user.genderSelection : req.body.genderSelection;
+      user.ageSelection = util.isEmpty(req.body.ageSelection) ? user.ageSelection : req.body.ageSelection;
+      user.locationDistance = util.isEmpty(req.body.distance) ? user.locationDistance : req.body.distance;
+
+      console.log(user);
+      
       return user.save();
     })
     .then((user) => {

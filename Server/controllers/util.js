@@ -14,3 +14,12 @@ exports.getDistanceFromLatLonInKm = function getDistanceFromLatLonInKm(lat1, lon
 function deg2rad(deg) {
   return deg * (Math.PI / 180)
 }
+
+exports.isEmpty = (value) => {
+  return (
+    value === undefined ||
+    value === null ||
+    (typeof value === 'object' && Object.keys(value).length === 0) ||
+    (typeof value === 'string' && value.trim().length === 0)
+  );
+};
