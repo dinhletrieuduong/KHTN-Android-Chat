@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "396563357039",
+    "firebase_url": "https://chattinder-92124.firebaseio.com",
+    "project_id": "chattinder-92124",
+    "storage_bucket": "chattinder-92124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396563357039:android:b979663ff2198212b75c9a",
+        "android_client_info": {
+          "package_name": "com.example.androidchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396563357039-hfti3qlhqsrk1f8ffhs4cg0mi1bakobj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG6A9-TXAz0mxbv8g4BEFcEdiFVGXvp2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396563357039-hfti3qlhqsrk1f8ffhs4cg0mi1bakobj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

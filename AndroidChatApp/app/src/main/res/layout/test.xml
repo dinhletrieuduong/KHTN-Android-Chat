@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.androidchatapp.MainActivity"
+    android:background="@drawable/backround_profile"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/icon"
+                android:layout_width="@dimen/size150dp"
+                android:layout_height="@dimen/size150dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/beach"
+                app:civ_border_color="#09c6df"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="thien ngon"
+                android:textColor="@color/colorBlack"
+                android:textSize="21sp"
+                />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_addImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="@dimen/size20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/txt_addImage"
+            android:layout_alignLeft="@+id/txt_addImage"
+            android:layout_alignRight="@+id/txt_addImage"
+            android:visibility="visible"
+            android:src="@drawable/img_camera_red"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Image"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:id="@+id/txt_addImage"></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_Setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/size20dp"
+            android:layout_above="@+id/txt_setting"
+            android:layout_alignBottom="@+id/txt_setting"
+            android:layout_alignLeft="@+id/txt_setting"
+            android:layout_alignRight="@+id/txt_setting"
+            android:visibility="visible"
+            android:src="@drawable/ic_setting"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/txt_setting"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="63dp"
+            android:layout_marginBottom="31dp"
+            android:text="Setting"
+            android:textSize="20sp"></TextView>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_Edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/size20dp"
+            android:layout_above="@+id/txt_change"
+            android:layout_alignBottom="@+id/txt_change"
+            android:layout_alignLeft="@+id/txt_change"
+            android:layout_alignRight="@+id/txt_change"
+            android:visibility="visible"
+            android:src="@drawable/ic_edit"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:id="@+id/txt_change"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="31dp"
+            android:text="Edit"
+            android:textSize="20sp"></TextView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_mail"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="thienngon011@gmail.com"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_phone"/>
+            <TextView
+                android:textStyle="bold"
+
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="+0899312421"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

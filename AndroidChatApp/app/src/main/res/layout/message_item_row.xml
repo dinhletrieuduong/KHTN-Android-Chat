@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="visible"
+        android:src="@drawable/iu"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="2dp"
+        android:layout_marginLeft="@dimen/size10dp"/>
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50dp"
+        android:layout_marginLeft="@dimen/size40dp"
+        android:layout_marginRight="@dimen/size10dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size30dp"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/messageUserName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:text="thiendoan"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/messageTimeSend"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="20dp"
+                android:textSize="16sp"
+                android:gravity="right"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/messageContent"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="25dp"
+            android:text="hello"
+            android:textSize="15dp"
+            android:layout_marginBottom="@dimen/size10dp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

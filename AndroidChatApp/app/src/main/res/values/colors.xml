@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="backroundLogin">#F7B500</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#808080</color>
+    <color name="btnLogin">#FFFFFF</color>
+    <color name="btnRegister">#DDDDDD</color>
+    <color name="purplePrimary">#9904D3</color>
+    <color name="purpleSecondary">#A1A4FD</color>
+    <color name="bluePrimary">#A3D5FF</color>
+    <color name="blueSecondary">#32C5FF</color>
+    <color name="btnMatch">#F24E86</color>
+    <color name="colorBlack">#FF0C0C0C</color>
+    <color name="colorgray1">#E8E8E6</color>
+    <color name="colorLogo0">#6CBDBA</color>
+    <color name="colorLogo1">#72CAC7</color>
+    <color name="colorRed">#F11A1A</color>
+
+    <!-- color setting -->
+    <string name="primaryDark">#292b3d</string>
+    <string name="graylight">#fafafa</string>
+    <string name ="startblue">#09c6df</string>
+    <string name="endblue">#0bcce6</string>
+    <string name="endbluebutton">#0DBBD3</string>
+
+</resources>

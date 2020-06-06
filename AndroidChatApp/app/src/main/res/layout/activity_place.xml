@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgray1"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size20dp"
+        android:text="Place"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EdPlaceSetting"
+        android:enabled="false"
+        android:text="235 nguyen van cu q5 tphcm"
+        android:background="@color/colorWhite"
+        android:textStyle="italic"
+        android:padding="@dimen/size10dp"
+        android:inputType="textCapSentences"
+        ></EditText>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btneditplace"
+        android:layout_marginTop="@dimen/size50dp"
+        android:padding="@dimen/size10dp"
+        android:background="@color/colorWhite"
+        android:text="Edit"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnconfirmedit"
+        android:background="@color/colorWhite"
+        android:text="Confirm"></Button>
+
+
+</LinearLayout>

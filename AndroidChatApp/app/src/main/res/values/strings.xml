@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AndroidChatApp</string>
+    <string name="loginName">Username</string>
+    <string name="passWord">Password</string>
+    <string name="Login">Log in</string>
+    <string name="dangKy">Đăng ký</string>
+    <string name="labelChat">Chat!</string>
+    <string name="label2">Best app cho find and chat with friends</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="DateOfBirth">Date of Birth</string>
+    <string name="rdbMale">Male</string>
+    <string name="rdbFemale">Female</string>
+    <string name="Create">Create</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="create1_new_acount">Create new account</string>
+    <string name="Search">Search</string>
+    <string name="orLoginwith">Or login with</string>
+    <string name="signup">Sign Up</string>
+    <string name="forgotpassword">Forgot password?</string>
+
+    <!--    <string name="URL_SERVER">http://10.10.206.181:5000/%1$s</string>-->
+    <string name="URL_SERVER">http://172.20.10.11:5000/%1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_app_id">207382670217465</string>
+    <string name="fb_login_protocol_scheme">fb207382670217465</string>
+
+
+</resources>

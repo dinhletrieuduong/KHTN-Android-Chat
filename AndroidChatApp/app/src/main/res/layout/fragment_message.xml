@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".View.MessageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/size10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50dp"
+            android:padding="10dp"
+            android:layout_margin="@dimen/size5dp"
+            android:orientation="horizontal"
+            android:background="@color/colorgray1">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size5dp"
+            android:hint="@string/Search"
+            android:layout_weight="10"
+            android:background="@null"
+            android:id="@+id/edSearchMessage">
+        </EditText>
+
+        <ImageView
+            android:layout_width="@dimen/size30dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size5dp"
+            android:id="@+id/imgSearchMessage"
+            android:layout_weight="1"
+            android:src="@drawable/icon_search">
+        </ImageView>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW MATCHES"
+            android:layout_marginLeft="@dimen/size5dp"
+            android:paddingTop="@dimen/size10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorRed">
+        </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:id="@+id/rclNewMatchMessage">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/purplePrimary"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Message"-->
+<!--                android:layout_marginTop="@dimen/size20dp"-->
+<!--                android:layout_marginBottom="@dimen/size10dp"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/newMessageBtn"-->
+<!--                android:layout_width="70px"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/edit_light"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginRight="@dimen/size20dp"-->
+<!--                android:layout_marginTop="@dimen/size10dp"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/size10dp"
+            android:layout_marginLeft="@dimen/size5dp"
+            android:textColor="@color/colorRed"
+            android:textSize="18sp"
+            android:text="MESSAGES">
+        </TextView>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listChatBox"
+            android:divider="@null"
+            />
+    </LinearLayout>
+
+
+</FrameLayout>
