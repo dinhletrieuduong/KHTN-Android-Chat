@@ -235,6 +235,7 @@ exports.nearBy = (req, res) => {
                     avatar: nearbyUser.avatar,
                     distance: usersDistance,
                     age: nearbyUser.age,
+                    gender: nearbyUser.gender,
                   }
                   nearbyUsers.push(userNearby);
                 }
