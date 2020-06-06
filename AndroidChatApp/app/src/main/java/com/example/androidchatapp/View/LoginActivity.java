@@ -191,7 +191,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         i.putExtra(USER_NAME, user.getUserName());
                         i.putExtra(USER_ID, user.getUserID());
-                        i.putExtra(AVATAR, user.getAvatar());
+//                        i.putExtra(AVATAR, user.getAvatar());
                         startActivity(i);
                         finish();
                     }
@@ -220,7 +220,7 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> postMap = new HashMap<>();
                 postMap.put("userName", userName);
-                postMap.put("avatar", photoUrl);
+//                postMap.put("avatar", photoUrl);
                 return postMap;
             }
         };

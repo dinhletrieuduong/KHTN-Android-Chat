@@ -26,7 +26,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,19 +36,28 @@
             android:layout_marginEnd="@dimen/size30dp"
             android:layout_marginBottom="@dimen/size10dp"
             >
-<!--            <EditText-->
-<!--                android:id="@+id/edDisplayName"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="@dimen/size5dp"-->
-<!--                android:background="@drawable/border_bottom"-->
-<!--                android:hint="Display Name"-->
-<!--                android:inputType="text"-->
-<!--                android:padding="@dimen/size10dp"-->
-<!--                android:singleLine="true"-->
-<!--                android:textColorHint="@color/colorWhite"-->
-<!--                android:textColor="@color/colorWhite"-->
-<!--                />-->
+            <!--            <EditText-->
+            <!--                android:id="@+id/edDisplayName"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="@dimen/size5dp"-->
+            <!--                android:background="@drawable/border_bottom"-->
+            <!--                android:hint="Display Name"-->
+            <!--                android:inputType="text"-->
+            <!--                android:padding="@dimen/size10dp"-->
+            <!--                android:singleLine="true"-->
+            <!--                android:textColorHint="@color/colorWhite"-->
+            <!--                android:textColor="@color/colorWhite"-->
+            <!--                />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Gender: "
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/size10dp"
+                android:layout_marginTop="@dimen/size10dp"
+                />
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,29 +99,24 @@
                 android:singleLine="true"
                 android:textColorHint="@color/colorWhite"
                 android:textColor="@color/colorWhite"
-                android:inputType="date">
-
-            </EditText>
+                android:inputType="number"/>
             <EditText
-                android:id="@+id/edDateOfBirth"
+                android:id="@+id/edAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/size5dp"
                 android:background="@drawable/border_bottom"
-                android:hint="@string/DateOfBirth"
+                android:hint="Age"
                 android:padding="@dimen/size10dp"
                 android:singleLine="true"
                 android:textColorHint="@color/colorWhite"
                 android:textColor="@color/colorWhite"
-                android:inputType="date"
-                android:focusableInTouchMode="false"
-                android:clickable="true">
-
-            </EditText>
+                android:inputType="number"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/size100dp"
+                android:layout_marginTop="@dimen/size20dp"
                 android:layout_marginBottom="@dimen/size10dp"
                 android:orientation="horizontal">
 
@@ -135,6 +138,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/custom_button"
                 android:text="Update"
+                android:textColor="@color/white"
                 android:backgroundTint="#EA5656"
                 >
             </Button>

@@ -49,7 +49,7 @@ import java.util.Map;
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnSignUp;
     TextView txt_backLogin;
-    EditText edUsername, edPassword, edDisplayName, edDateOfBirth, edPhone;
+    EditText edUsername, edPassword, edDisplayName, edAge, edPhone;
     boolean isImageDefault = true;
     RadioGroup rdgGender;
     RadioButton checkGender;
@@ -80,7 +80,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         edUsername = (EditText) findViewById(R.id.edUsername);
         edPassword = (EditText) findViewById(R.id.edPassword);
         edDisplayName = (EditText) findViewById(R.id.edDisplayName);
-        edDateOfBirth = (EditText) findViewById(R.id.edDateOfBirth);
+        edAge = (EditText) findViewById(R.id.edAge);
         edPhone = (EditText) findViewById(R.id.edPhone);
         txt_backLogin = (TextView) findViewById((R.id.txt_backLogin));
 
@@ -103,12 +103,12 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
         // chon ngay sinh
-        edDateOfBirth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseDate();
-            }
-        });
+//        edDateOfBirth.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                chooseDate();
+//            }
+//        });
 
         // Tro ve login
         txt_backLogin.setOnClickListener(new View.OnClickListener() {
@@ -136,21 +136,21 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     // chon ngay sinh
-    private void chooseDate(){
-        final Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(calendar.DATE);
-        int month = calendar.get(calendar.MONTH);
-        int year = calendar.get(calendar.YEAR);
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int i1, int i2, int i3) {
-                calendar.set(i1, i2, i3);
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                edDateOfBirth.setText(simpleDateFormat.format(calendar.getTime()));
-            }
-        }, year, month, day);
-        datePickerDialog.show();
-    }
+//    private void chooseDate(){
+//        final Calendar calendar = Calendar.getInstance();
+//        int day = calendar.get(calendar.DATE);
+//        int month = calendar.get(calendar.MONTH);
+//        int year = calendar.get(calendar.YEAR);
+//        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int i1, int i2, int i3) {
+//                calendar.set(i1, i2, i3);
+//                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//                edDateOfBirth.setText(simpleDateFormat.format(calendar.getTime()));
+//            }
+//        }, year, month, day);
+//        datePickerDialog.show();
+//    }
 
     // thong bao loi
     @Override
@@ -159,7 +159,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         String password = edPassword.getText().toString();
         String displayName = edDisplayName.getText().toString();
         String phone = edPhone.getText().toString();
-        String dateofbirth = edDateOfBirth.getText().toString();
+        String age = edAge.getText().toString();
         String error = "";
 
         int gender = this.rdgGender.getCheckedRadioButtonId();
@@ -186,10 +186,14 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             error += "Phone number not valid";
             Toast.makeText(this,error,Toast.LENGTH_SHORT).show();
         }
-        else if(dateofbirth.trim().length() < 6){
-            error += "DateOfBirth not valid";
-            Toast.makeText(this,error,Toast.LENGTH_SHORT).show();
+        else if(age.trim().length() == 0 || age.trim().length() > 2) {
+            error += "Age not valid";
+            Toast.makeText(SignupActivity.this, error, Toast.LENGTH_SHORT).show();
         }
+//        else if(dateofbirth.trim().length() < 6){
+//            error += "DateOfBirth not valid";
+//            Toast.makeText(this,error,Toast.LENGTH_SHORT).show();
+//        }
         else {
             if (isImageDefault) {
                 BitmapDrawable drawable = (BitmapDrawable) imgAttach.getDrawable();
@@ -209,7 +213,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this, "There is no selected photo", Toast.LENGTH_LONG).show();
                 return;
             }
-            isImageDefault = false;
             try {
                 InputStream inputStream = this.getContentResolver().openInputStream(data.getData());
                 BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
@@ -218,6 +221,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 imgAttach.setImageBitmap(bmpAttach);
                 imgAttach.setVisibility(View.VISIBLE);
                 base64ImageString = Util.convertBitmapToString(bmpAttach);
+                isImageDefault = false;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -252,7 +256,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 postMap.put("userName", edUsername.getText().toString());
                 postMap.put("password", edPassword.getText().toString());
                 postMap.put("name", edDisplayName.getText().toString());
-                postMap.put("dob", edDateOfBirth.getText().toString());
+//                postMap.put("dob", edDateOfBirth.getText().toString());
+                postMap.put("age", edAge.getText().toString());
                 postMap.put("phone", edPhone.getText().toString());
                 postMap.put("gender", checkGender.getText().toString());
                 postMap.put("avatar", base64ImageString);

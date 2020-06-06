@@ -157,7 +157,7 @@ public class MessageFragment extends Fragment {
     }
 
     private StringRequest browseAllChatRequest() {
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, browseAllChatUrl + userID, new Response.Listener<String>() {
+        return new StringRequest(Request.Method.GET, browseAllChatUrl + userID, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("Volley Result", ": "+ response);
@@ -186,6 +186,5 @@ public class MessageFragment extends Fragment {
                 error.printStackTrace(); //log the error resulting from the request for diagnosis/debugging
             }
         });
-        return stringRequest;
     }
 }

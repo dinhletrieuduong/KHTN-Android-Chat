@@ -1,8 +1,6 @@
 const User = require('../models/User.js');
 const util = require('./util');
 exports.login = (req, res) => {
-  console.log('User request');
-  
   User.findOne({ userName: req.body.userName })
 		.then((user) => {
 			if (user.password === req.body.password) {
@@ -37,7 +35,6 @@ exports.logout = (req, res) => {
 		.then((user) => {
       user.status = false;
       return user.save()
-        
     })
     .then(() => {
       res.status(200).json({message: 'Logout!'});
@@ -56,12 +53,12 @@ exports.signUp = (req, res) => {
       const newUser = new User({
         userName: req.body.userName,
         password: req.body.password,
-        avatar: req.body.avatar,
-        isLoginByFacebook: false,
-        age: req.body.age,
-        phone: req.body.phone,
         name: req.body.name,
         gender: req.body.gender,
+        phone: req.body.phone,
+        age: req.body.age,
+        avatar: req.body.avatar,
+        isLoginByFacebook: false,
         email: "",
         lastLocation: "",
       });
