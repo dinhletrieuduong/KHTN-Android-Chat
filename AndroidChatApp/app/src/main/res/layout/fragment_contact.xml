@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.ContactFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@color/purplePrimary"-->
+        <!--            >-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Contact"-->
+        <!--                android:layout_marginTop="@dimen/size20dp"-->
+        <!--                android:layout_marginBottom="@dimen/size10dp"-->
+        <!--                android:textColor="#fff"-->
+        <!--                android:textSize="20sp"-->
+        <!--                android:layout_centerHorizontal="true"-->
+        <!--                />-->
+        <!--        </RelativeLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size5dp"
+                android:hint="@string/Search"
+                android:layout_weight="10"
+                android:background="@null"
+                android:id="@+id/edSearch">
+            </EditText>
+
+            <ImageView
+                android:layout_width="@dimen/size30dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size5dp"
+                android:id="@+id/imgSearch"
+                android:layout_weight="1"
+                android:src="@drawable/icon_search">
+            </ImageView>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:id="@+id/avatarList">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <ListView
+            android:id="@+id/list_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+
+</FrameLayout>

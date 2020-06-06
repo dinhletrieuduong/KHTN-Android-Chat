@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <item
+        android:id="@+id/nav_message"
+        android:enabled="true"
+        android:title="Messages"
+        android:icon="@drawable/logo_outline"
+        android:iconTint="#fff"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/nav_contact"-->
+<!--        android:enabled="true"-->
+<!--        android:title="Contacts"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:iconTint="#fff"-->
+<!--        android:icon="@drawable/contact" />-->
+
+    <item
+        android:id="@+id/action_nearby"
+        android:enabled="true"
+        android:title="Nearby"
+        android:icon="@drawable/location"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_setting"
+        android:enabled="true"
+        android:title="Settings"
+        app:showAsAction="ifRoom"
+        android:iconTint="#fff"
+        android:icon="@drawable/settings" />
+</menu>

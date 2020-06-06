@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colozm"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size10dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size60dp"
+            android:text="@string/SignUp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/btnLogin"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/size5dp"
+            android:layout_marginStart="@dimen/size30dp"
+            android:layout_marginEnd="@dimen/size30dp"
+            android:layout_marginBottom="@dimen/size10dp"
+            >
+            <EditText
+                android:id="@+id/edUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5dp"
+                android:background="@drawable/border_bottom"
+                android:hint="@string/loginName"
+                android:padding="@dimen/size10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                />
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5dp"
+                android:background="@drawable/border_bottom"
+                android:hint="@string/passWord"
+                android:inputType="textPassword"
+                android:padding="@dimen/size10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"/>
+            <EditText
+                android:id="@+id/edDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5dp"
+                android:background="@drawable/border_bottom"
+                android:hint="Display Name"
+                android:inputType="text"
+                android:padding="@dimen/size10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/size10dp"
+                android:layout_marginTop="@dimen/size10dp"
+                android:id="@+id/rdgGender">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdMale"
+                    android:text="@string/rdbMale"
+                    android:checked="true"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite">
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdFemaler"
+                    android:text="@string/rdbFemale"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"
+                    >
+                </RadioButton>
+
+            </RadioGroup>
+            <EditText
+                android:id="@+id/edPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5dp"
+                android:background="@drawable/border_bottom"
+                android:hint="Phone Number"
+                android:padding="@dimen/size10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:inputType="date">
+
+            </EditText>
+            <EditText
+                android:id="@+id/edDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5dp"
+                android:background="@drawable/border_bottom"
+                android:hint="@string/DateOfBirth"
+                android:padding="@dimen/size10dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:inputType="date"
+                android:focusableInTouchMode="false"
+                android:clickable="true">
+
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size100dp"
+                android:layout_marginBottom="@dimen/size10dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/img_attach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size100dp"
+                    android:visibility="visible"
+                    android:src="@drawable/default_user"
+                    app:civ_border_color="@color/btnMatch"
+                    app:civ_border_width="2dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:text="@string/Create"
+                android:backgroundTint="#EA5656"
+                android:textColor="#fff"
+                >
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_backLogin"
+                android:text="Back to Login"
+                android:layout_margin="@dimen/size20dp"
+                android:textColor="#FFF"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/purplePrimary"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/size10dp"-->
+
+    <!--        >-->
+    <!--        <TextView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textSize="@dimen/size60dp"-->
+    <!--            android:text="@string/SignUp"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:textColor="@color/btnLogin"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:gravity="center"-->
+    <!--            >-->
+    <!--        </TextView>-->
+    <!--    </LinearLayout>-->
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_marginTop="@dimen/size5dp"-->
+    <!--            android:layout_marginStart="@dimen/size30dp"-->
+    <!--            android:layout_marginEnd="@dimen/size30dp"-->
+    <!--            android:layout_marginBottom="@dimen/size10dp"-->
+    <!--            >-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/edUsername"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/size5dp"-->
+    <!--                android:background="@drawable/border_bottom"-->
+    <!--                android:hint="@string/loginName"-->
+    <!--                android:padding="@dimen/size10dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textColorHint="@color/colorWhite"-->
+    <!--                android:textColor="@color/colorWhite"-->
+    <!--                />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/edPassword"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/size5dp"-->
+    <!--                android:background="@drawable/border_bottom"-->
+    <!--                android:hint="@string/passWord"-->
+    <!--                android:inputType="textPassword"-->
+    <!--                android:padding="@dimen/size10dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textColor="@color/colorWhite"-->
+    <!--                android:textColorHint="@color/colorWhite"/>-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/edConfirmPassword"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/size5dp"-->
+    <!--                android:background="@drawable/border_bottom"-->
+    <!--                android:hint="@string/confirmpassword"-->
+    <!--                android:inputType="textPassword"-->
+    <!--                android:padding="@dimen/size10dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textColorHint="@color/colorWhite"-->
+    <!--                android:textColor="@color/colorWhite"-->
+    <!--                />-->
+    <!--            <RadioGroup-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:layout_marginLeft="@dimen/size10dp"-->
+    <!--                android:layout_marginTop="@dimen/size10dp"-->
+    <!--                android:id="@+id/rdgGender">-->
+
+    <!--                <RadioButton-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/rdMale"-->
+    <!--                    android:text="@string/rdbMale"-->
+    <!--                    android:checked="true"-->
+    <!--                    android:textColor="@color/colorWhite"-->
+    <!--                    android:buttonTint="@color/colorWhite">-->
+    <!--                </RadioButton>-->
+
+    <!--                <RadioButton-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/rdFemaler"-->
+    <!--                    android:text="@string/rdbFemale"-->
+    <!--                    android:textColor="@color/colorWhite"-->
+    <!--                    android:buttonTint="@color/colorWhite"-->
+    <!--                    >-->
+    <!--                </RadioButton>-->
+
+    <!--            </RadioGroup>-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/edPhone"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/size5dp"-->
+    <!--                android:background="@drawable/border_bottom"-->
+    <!--                android:hint="Phone Number"-->
+    <!--                android:padding="@dimen/size10dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textColorHint="@color/colorWhite"-->
+    <!--                android:textColor="@color/colorWhite"-->
+    <!--                android:inputType="date">-->
+
+    <!--            </EditText>-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/edDateOfBirth"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/size5dp"-->
+    <!--                android:background="@drawable/border_bottom"-->
+    <!--                android:hint="@string/DateOfBirth"-->
+    <!--                android:padding="@dimen/size10dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:textColorHint="@color/colorWhite"-->
+    <!--                android:textColor="@color/colorWhite"-->
+    <!--                android:inputType="date"-->
+    <!--                android:focusableInTouchMode="false"-->
+    <!--                android:clickable="true">-->
+
+    <!--            </EditText>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/size100dp"-->
+    <!--                android:layout_marginBottom="@dimen/size10dp"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--                    android:id="@+id/img_attach"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="@dimen/size100dp"-->
+    <!--                    android:visibility="visible"-->
+    <!--                    android:src="@drawable/default_user"-->
+    <!--                    app:civ_border_color="@color/purplePrimary"-->
+    <!--                    app:civ_border_width="2dp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btnCreate"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:background="@drawable/custom_button"-->
+    <!--                android:text="@string/Create"-->
+    <!--                android:backgroundTint="@color/colorWhite"-->
+    <!--                >-->
+    <!--            </Button>-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:id="@+id/txt_backLogin"-->
+    <!--                android:text="Back to Login"-->
+    <!--                android:textColor="#FFF"-->
+    <!--                android:textSize="14dp"-->
+    <!--                android:textAlignment="center"-->
+    <!--                android:layout_marginTop="@dimen/size10dp"-->
+    <!--                />-->
+    <!--        </LinearLayout>-->
+    <!--    </ScrollView>-->
+    <!--</LinearLayout>-->

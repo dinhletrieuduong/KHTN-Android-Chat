@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorgray1"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size20dp"
+        android:text="Thiết lập tài khoản"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPhoneSetting"
+            android:background="@color/colorWhite"
+            android:textStyle="italic"
+            android:gravity="right"
+            android:text="0985658745"
+            android:padding="@dimen/size10dp"
+            android:inputType="textCapSentences"
+            tools:ignore="MissingConstraints"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Phone Number"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEmailSetting"
+            android:gravity="right"
+            android:text="Email"
+            android:padding="@dimen/size10dp"
+            android:background="@color/colorWhite"
+            android:textStyle="italic"
+            android:inputType="textCapSentences"
+            tools:ignore="MissingConstraints"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Email"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size30dp"
+        android:text="Khám phá"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/txtPlaceSetting"
+            android:padding="@dimen/size10dp"
+            android:background="@color/colorWhite"
+            android:text="HCM"
+            tools:ignore="MissingConstraints"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Place"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDistanceSetting"
+            android:gravity="right"
+            android:padding="@dimen/size10dp"
+            android:background="@color/colorWhite"
+            android:text="0"
+            tools:ignore="MissingConstraints"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Max distance"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/distanceSeekBarSetting"
+            android:background="@color/colorWhite"
+            tools:ignore="MissingConstraints">
+        </SeekBar>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/txtGenderSetting"
+            android:padding="@dimen/size10dp"
+            android:background="@color/colorWhite"
+            android:text="Male"
+            tools:ignore="MissingConstraints"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Gender"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/txtageSetting"
+            android:padding="@dimen/size10dp"
+            android:background="@color/colorWhite"
+            android:text="18"
+            tools:ignore="MissingConstraints"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Age"
+            android:padding="@dimen/size10dp"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <SeekBar
+        android:id="@+id/ageSeekbarSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+    </SeekBar>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size50dp"
+        android:padding="@dimen/size10dp"
+        android:background="@color/colorWhite"
+        android:text="ConFirm"
+        android:id="@+id/bnt_ConfirmSetting"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10dp"
+        android:background="@color/colorWhite"
+        android:text="Log out"
+        android:layout_marginTop="@dimen/size10dp"
+        android:id="@+id/bntLogout"></Button>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_attach"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100dp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/size10dp"
+        android:src="@drawable/logologin_zm"
+        android:background="@drawable/colozm"
+        app:civ_border_color="@color/btnMatch"
+        />
+
+</LinearLayout>
