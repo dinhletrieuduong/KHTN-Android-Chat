@@ -1,24 +1,23 @@
 package com.example.androidchatapp.Model;
 
-import android.graphics.Bitmap;
 
 public class UserModel {
 
     private String userID;
     private String userName;
     private String password;
+    private String email;
+    private String place;
     private String phone;
     private String age;
     private String gender;
     private String avatar;
-//    private Bitmap bitmap;
 
     private String genderSelection;
     private String locationDistance;
     private String ageSelection;
     private String lastLocation;
 
-    private String roomID;
 
     public UserModel() {}
     public UserModel(String userID, String userName) {
@@ -44,6 +43,14 @@ public class UserModel {
 
     public void setPassword(String password) { this.password = password; }
 
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
+
+    public String getPlace() { return place; }
+
+    public void setPlace(String place) { this.place = place; }
+
     public String getPhone() { return phone; }
 
     public void setPhone(String phone) { this.phone = phone; }
@@ -63,14 +70,6 @@ public class UserModel {
     public String getLastLocation() { return lastLocation; }
 
     public void setLastLocation(String lastLocation) { this.lastLocation = lastLocation; }
-//
-//    public Bitmap getBitmap() { return bitmap; }
-//
-//    public void setBitmap(Bitmap bm) { this.bitmap = bm; }
-
-    public String getRoomID() { return roomID; }
-
-    public void setRoomID(String roomID) { this.roomID = roomID; }
 
     public String getGenderSelection() { return genderSelection; }
 

@@ -3,7 +3,10 @@ const util = require('./util');
 exports.login = (req, res) => {
   User.findOne({ userName: req.body.userName })
 		.then((user) => {
-			if (user.password === req.body.password) {
+      if (util.isEmpty(user)) {
+        res.status(400).json({message: "User not exists"});
+      }
+			else if (user.password === req.body.password) {
         user.status = true;
         user.save()
           .then(() => {
@@ -288,14 +291,12 @@ exports.updateProfile = (req, res) => {
       user.email = util.isEmpty(req.body.email) ? user.email : req.body.email;
       user.place = util.isEmpty(req.body.place)? user.place : req.body.place;
       user.gender = util.isEmpty(req.body.gender) ? user.gender : req.body.gender;
-      user.avatar = util.isEmpty(eq.body.avatar)? user.avatar : req.body.avatar;
+      user.avatar = util.isEmpty(req.body.avatar)? user.avatar : req.body.avatar;
 
       user.genderSelection = util.isEmpty(req.body.genderSelection) ? user.genderSelection : req.body.genderSelection;
       user.ageSelection = util.isEmpty(req.body.ageSelection) ? user.ageSelection : req.body.ageSelection;
       user.locationDistance = util.isEmpty(req.body.distance) ? user.locationDistance : req.body.distance;
 
-      console.log(user);
-      
       return user.save();
     })
     .then((user) => {
@@ -323,6 +324,7 @@ exports.getProfile = (req, res) => {
         gender: user.gender,
 
         email: user.email,
+        place: user.place,
         phone: user.phone,
         ageSelection: user.ageSelection,
         genderSelection: user.genderSelection,

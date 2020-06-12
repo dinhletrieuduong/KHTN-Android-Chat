@@ -173,7 +173,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private StringRequest loginByFacebookRequest(final String userName, final String photoUrl) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, loginByFacebookUrl, new Response.Listener<String>() {
+        return new StringRequest(Request.Method.POST, loginByFacebookUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 //                        the response contains the result from the server, a json string or any other object returned by your server
@@ -225,11 +225,10 @@ public class LoginActivity extends AppCompatActivity {
                 return postMap;
             }
         };
-        return stringRequest;
     }
 
     private StringRequest loginRequest(final String userName, final String password) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, loginUrl, new Response.Listener<String>() {
+        return new StringRequest(Request.Method.POST, loginUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("Volley Result", ": "+ response);
@@ -267,7 +266,6 @@ public class LoginActivity extends AppCompatActivity {
                 return postMap;
             }
         };
-        return stringRequest;
     }
 
 }

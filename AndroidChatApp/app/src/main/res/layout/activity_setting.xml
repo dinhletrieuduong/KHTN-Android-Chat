@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size20dp"
-        android:text="Thiết lập tài khoản"></TextView>
+        android:text="Thiết lập tài khoản"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,13 +26,13 @@
             android:text="0985658745"
             android:padding="@dimen/size10dp"
             android:inputType="textCapSentences"
-            tools:ignore="MissingConstraints"></TextView>
+            tools:ignore="MissingConstraints"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Phone Number"
             android:padding="@dimen/size10dp"
-            tools:ignore="MissingConstraints"></TextView>
+            tools:ignore="MissingConstraints"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,14 +48,14 @@
             android:background="@color/colorWhite"
             android:textStyle="italic"
             android:inputType="textCapSentences"
-            tools:ignore="MissingConstraints"></TextView>
+            tools:ignore="MissingConstraints"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Email"
             android:padding="@dimen/size10dp"
-            tools:ignore="MissingConstraints"></TextView>
+            tools:ignore="MissingConstraints"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

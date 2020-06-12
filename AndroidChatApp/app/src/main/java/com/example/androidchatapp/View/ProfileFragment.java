@@ -41,10 +41,8 @@ public class ProfileFragment extends Fragment {
     private LinearLayout logOutBtn;
     private FirebaseAuth mAuth;
 
-
-    String getProfileUrl;
-    String userID;
-    UserModel userProfile;
+    private String userID, getProfileUrl;
+    private UserModel userProfile;
 
     public ProfileFragment() { }
     public ProfileFragment(String userID) { this.userID = userID; }
