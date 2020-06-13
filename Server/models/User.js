@@ -8,6 +8,7 @@ const UserSchema = mongoose.Schema({
   avatar: String,
   phone: String,
   age: String,
+  place: String,
   gender: String,
   isLoginByFacebook: Boolean,
 
