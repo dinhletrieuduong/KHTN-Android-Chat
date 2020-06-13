@@ -4,20 +4,16 @@ Android Chat - an android chat application like tinder
 2. 1753039 - Phan Tuong Thien Doan - thiendoan011@gmail.com - 0899304284
 
 Features:
-- [x] Đăng nhập
-- [x] Đăng ký
+- [x] Đăng nhập, Đăng ký
 - [x] Có avatar
 - [x] Danh sách bạn bè, Danh sách chat box (room chat)
-- [x] Nhắn tin
-- [x] Gửi ảnh
-- [x] Chat emoji
+- [x] Nhắn tin, Gửi ảnh, Chat emoji
 - [x] Gỡ tin nhắn
 - [x] Đăng nhập bằng facebook
 - [x] Quản lý tài khoản(tên, tuổi, sdt,…)
 - [x] Đã xem tin nhắn
-- [x] Tìm bạn bè theo phạm vi
+- [x] Tìm bạn bè theo phạm vi, Ghép đôi
 - [ ] Filter(online, offline)
-- [ ] Ghép đôi
 - [ ] Thông báo(notification)
 - [ ] Chat nhóm
 
